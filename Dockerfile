@@ -1,7 +1,8 @@
 FROM centos:7
 
-RUN yum install -y git && adduser user
+RUN yum install -y git && \
+    adduser user -d /tmp -s /bin/bash
 USER user
 WORKDIR /tmp
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["sh", "-c", "tail -f /dev/null"]
