@@ -1,7 +1,8 @@
-FROM ruby:alpine
+FROM centos:7
 
-RUN adduser -S user
+RUN adduser user 
 USER user
+WORKDIR /home/user
 RUN gem install puppet-lint
 
-ENTRYPOINT ["/bin/ash"]
+ENTRYPOINT ["/bin/bash"]
