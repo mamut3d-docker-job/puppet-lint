@@ -4,4 +4,4 @@ RUN adduser -S user
 USER user
 RUN gem install puppet-lint
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/ash"]
