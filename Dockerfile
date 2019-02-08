@@ -1,7 +1,7 @@
 FROM centos:7
 
-RUN adduser user 
+RUN adduser user -s /bin/bash
 USER user
 WORKDIR /home/user
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["/bin/bash"]
